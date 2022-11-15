@@ -6,8 +6,9 @@
   "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && node meme_scrapper.js && node main.js",
+    "start": "npx tsc && node meme_scrapper.js",
     "main": "npx tsc && node main.js"
+    
   },
   "repository": {
     "type": "git",

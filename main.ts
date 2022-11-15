@@ -1,5 +1,7 @@
 import { question} from "readline-sync";
 import { exit } from "process";
+import {meme} from '../ScrapperWork/meme_type';
+import {fullScrap,randomMeme} from './meme_scrapper.js';
 
 
 function main() : void {;
@@ -8,10 +10,12 @@ function main() : void {;
     const validInputs : boolean= input(question1);
     if(validInputs){
         if(question1==='1'){
-        
+          fullScrap();
+            
         }
         if(question1==='2'){
-
+        randomMeme();
+        
         }
         if(question1==='3'){
             return process.exit();
