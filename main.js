@@ -6,12 +6,13 @@ function main() {
     const validInputs = input(question1);
     if (validInputs) {
         if (question1 === '1') {
-            fullScrap()
-                .then(main);
+            fullScrap();
+            setTimeout(function () {
+                main();
+            }, 3000);
         }
         if (question1 === '2') {
             randomMeme();
-            main();
         }
         if (question1 === '3') {
             return process.exit();

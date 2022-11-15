@@ -10,11 +10,16 @@ function main() : void {;
     const validInputs : boolean= input(question1);
     if(validInputs){
         if(question1==='1'){
-          fullScrap();
-            
+         fullScrap();
+           setTimeout(function(){
+            main()
+           },2000)
         }
         if(question1==='2'){
         randomMeme();
+        setTimeout(function(){
+            main()
+           },2000)
         
         }
         if(question1==='3'){
