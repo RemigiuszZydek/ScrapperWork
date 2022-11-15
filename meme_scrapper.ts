@@ -3,7 +3,6 @@ import cheerio from "cheerio";
 import {meme} from '../ScrapperWork/meme_type'
 
 
-
   const getUrl = async (hostname: string,): Promise<string> =>
   new Promise((resolve, reject) => {
     https
@@ -38,7 +37,9 @@ import {meme} from '../ScrapperWork/meme_type'
   
   
 
-  const getMemeInfo=(getMeme: cheerio.Element):meme[]=>{
+  
+    
+  const getMemeInfo =(getMeme: cheerio.Element):meme[]=>{
     const memes : meme[]=[];
     const $ = cheerio.load(getMeme);
     const url = $('div.figure-holder > figure > a').attr('href');
@@ -53,8 +54,7 @@ import {meme} from '../ScrapperWork/meme_type'
  
     return memes;
   }
-
-   getUrl("kwejk.pl")
+  getUrl("kwejk.pl")
   .then(getMeme)
   .then((getMeme) => {
     let memes: meme[] = [];
@@ -62,3 +62,8 @@ import {meme} from '../ScrapperWork/meme_type'
     return memes;
     }).then((memes)=>console.log(memes))
   .catch((error) => console.log(error));
+
+
+  
+
+  
