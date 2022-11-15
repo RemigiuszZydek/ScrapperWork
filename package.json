@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/RemigiuszZydek/ScrapperWork#readme",
   "dependencies": {
+    "@types/cheerio": "^0.22.31",
     "@types/readline-sync": "^1.4.4",
+    "cheerio": "^1.0.0-rc.12",
     "process": "^0.11.10",
     "readline-sync": "^1.4.10"
   },
