@@ -1,0 +1,28 @@
+{
+  "name": "scrapperwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemigiuszZydek/ScrapperWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RemigiuszZydek/ScrapperWork/issues"
+  },
+  "homepage": "https://github.com/RemigiuszZydek/ScrapperWork#readme",
+  "dependencies": {
+    "@types/readline-sync": "^1.4.4",
+    "process": "^0.11.10",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
+}
