@@ -54,7 +54,7 @@ import {meme} from '../ScrapperWork/meme_type'
     return memes;
   }
 
-  getUrl("kwejk.pl")
+  export const wholeScrapper =getUrl("kwejk.pl")
   .then(getMeme)
   .then((getMeme) => {
     let memes: meme[] = [];
