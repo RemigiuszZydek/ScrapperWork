@@ -2,9 +2,12 @@
   "name": "scrapperwork",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "meme_scrapper.js",
+  "type":"module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && node meme_scrapper.js",
+    "main": "npx tsc && node main.js"
   },
   "repository": {
     "type": "git",
