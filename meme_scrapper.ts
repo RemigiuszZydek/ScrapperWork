@@ -27,10 +27,10 @@ import {meme} from '../ScrapperWork/meme_type'
       });
   });
 
-   const getMeme = (html: string): cheerio.Cheerio => {
+  const getMeme = (html: string): cheerio.Cheerio => {
     const $ = cheerio.load(html);
     const fullMeme = $(
-      "body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12 > div.media-element-wrapper"
+      "body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12> div.media-element-wrapper"
     );
     return fullMeme;
   };
@@ -39,16 +39,18 @@ import {meme} from '../ScrapperWork/meme_type'
 
   
     
-   const getMemeInfo = (getMeme: cheerio.Element):meme[]=>{
+  const getMemeInfo=(getMeme: cheerio.Element):meme[]=>{
     const memes : meme[]=[];
     const $ = cheerio.load(getMeme);
-    const url = $('div.figure-holder > figure > a').attr('href');
-    const title = $('div > div > div.content > h2 > a ').text().trim().replace("\n","");
+    const url = $('div > div').attr('data-image');
+    const title = $('div >div > div > div.content > h2 > a ').text().trim().replace("\n","");
+    const likes = $('div>div').attr('data-vote-up');
+    const autor = $('div > div > div.user-bar > div > a > span.name').text()
     memes.push({
       url:url,
       title: title,
-      likes: $('div > div > div.actions > div.votes > div > span').text(),
-      autor:$('div > div > div.user-bar > div > a > span.name').text()
+      likes: likes,
+      autor:autor
     })
     
     
