@@ -1,6 +1,6 @@
 import https from 'https';
 import cheerio from "cheerio";
-import {meme} from '../ScrapperWork/meme_type'
+import {meme} from './meme_type'
 
 
  const getUrl = async (hostname: string,): Promise<string> =>

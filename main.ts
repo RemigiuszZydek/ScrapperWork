@@ -1,7 +1,7 @@
 import { question} from "readline-sync";
 import { exit } from "process";
-import {meme} from '../ScrapperWork/meme_type';
-import {fullScrap,randomMeme} from './meme_scrapper.js';
+import {meme} from './src/meme_type';
+import {fullScrap,randomMeme} from './src/meme_scrapper';
 
 
 function main() : void {;
