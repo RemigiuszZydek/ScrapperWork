@@ -4,8 +4,8 @@ Program to scrap data from "kwejk.pl" website and show it at console.
 
 
 ## Installation
-
-When u clone repository go to folder SCRAPPERWORK and install all modules using:
+1. Clone repository.
+2. After you cloned repository, go to folder SCRAPPERWORK and install all modules using:
 
 ```bash
   npm i
