@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "meme_scrapper.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tsc && node meme_scrapper.js",
     "main": "npx tsc && node main.js"
-    
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,8 @@
     "@types/readline-sync": "^1.4.4",
     "cheerio": "^1.0.0-rc.12",
     "process": "^0.11.10",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "typescript": "^4.9.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.9"
