@@ -4,23 +4,27 @@ function main() {
     ;
     const question1 = question('Welcome to scrapper. What do You want to do ? \n1.Full scrap meme site\n2.Random 1 meme\n3.Quit\n: ');
     const validInputs = input(question1);
-    if (validInputs) {
-        if (question1 === '1') {
+    if (!validInputs) {
+        console.log("Wrong input");
+        setTimeout(function () {
+            main();
+        }, 500);
+    }
+    switch (question1) {
+        case '1':
             fullScrap();
             setTimeout(function () {
                 main();
-            }, 3000);
-        }
-        if (question1 === '2') {
+            }, 2000);
+            break;
+        case '2':
             randomMeme();
-        }
-        if (question1 === '3') {
+            setTimeout(function () {
+                main();
+            }, 2000);
+            break;
+        case '3':
             return process.exit();
-        }
-    }
-    else {
-        console.log("Wrong input.");
-        main();
     }
 }
 main();

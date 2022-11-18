@@ -32,19 +32,21 @@ const getUrl = (hostname) => __awaiter(void 0, void 0, void 0, function* () {
 });
 const getMeme = (html) => {
     const $ = cheerio.load(html);
-    const fullMeme = $("body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12 > div.media-element-wrapper");
+    const fullMeme = $("body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12> div.media-element-wrapper");
     return fullMeme;
 };
 const getMemeInfo = (getMeme) => {
     const memes = [];
     const $ = cheerio.load(getMeme);
-    const url = $('div.figure-holder > figure > a').attr('href');
-    const title = $('div > div > div.content > h2 > a ').text().trim().replace("\n", "");
+    const url = $('div > div').attr('data-image');
+    const title = $('div >div > div > div.content > h2 > a ').text().trim().replace("\n", "");
+    const likes = $('div>div').attr('data-vote-up');
+    const autor = $('div > div > div.user-bar > div > a > span.name').text();
     memes.push({
         url: url,
         title: title,
-        likes: $('div > div > div.actions > div.votes > div > span').text(),
-        autor: $('div > div > div.user-bar > div > a > span.name').text()
+        likes: likes,
+        autor: autor
     });
     return memes;
 };

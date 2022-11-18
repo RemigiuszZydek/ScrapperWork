@@ -8,30 +8,32 @@ function main() : void {;
     const question1 : string=question
     ('Welcome to scrapper. What do You want to do ? \n1.Full scrap meme site\n2.Random 1 meme\n3.Quit\n: ');
     const validInputs : boolean= input(question1);
-    if(validInputs){
-        if(question1==='1'){
-         fullScrap();
+
+if(!validInputs){
+    console.log("Wrong input")
+    setTimeout(function(){
+        main()
+       },500);
+}
+switch (question1){
+        case '1':
+            fullScrap();
            setTimeout(function(){
             main()
-           },2000)
-        }
-        if(question1==='2'){
-        randomMeme();
-        setTimeout(function(){
-            main()
-           },2000)
-        
-        }
-        if(question1==='3'){
+           },2000);
+           break;
+        case '2':
+            randomMeme();
+            setTimeout(function(){
+                main()
+               },2000);
+               break;
+        case '3':
             return process.exit();
-        }
-    }
-    else {
-        console.log("Wrong input.")
+}
+}
+
 main()
-}
-}
-    main()
 
 function input (str:string):boolean{
     const inputs = str;
