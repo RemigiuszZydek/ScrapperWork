@@ -24,7 +24,7 @@ class meme  {
     dislikes: string|undefined;
     autor:string;
 
-    constructor(url: string,title: string,likes: string,dislikes:string|undefined,autor: string){
+    constructor(url: string,title: string,likes: string,dislikes: string,autor: string){
       this.url=url;
       this.title=title;
       this.likes=likes;
