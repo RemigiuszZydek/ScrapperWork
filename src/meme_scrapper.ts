@@ -61,6 +61,7 @@ import {meme} from './meme_type'
     return memes;
     }).then((memes)=>console.log(memes))
   }
+  
 
   export async function randomMeme(){ 
   
@@ -73,6 +74,8 @@ import {meme} from './meme_type'
     console.log(memes[i]);
   })
   }
+  
+  
   
   
     

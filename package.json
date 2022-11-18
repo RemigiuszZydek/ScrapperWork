@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && node meme_scrapper.js",
+    "start": "npx tsc && node bin/meme_scrapper.js",
     "main": "npx tsc && node bin/main.js"
   },
   "repository": {
