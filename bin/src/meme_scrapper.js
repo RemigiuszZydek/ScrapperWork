@@ -29,12 +29,12 @@ const getUrl = (hostname) => __awaiter(void 0, void 0, void 0, function* () {
             reject(error);
         });
     });
-});
+}); // Gets full website to string.
 const getMeme = (html) => {
     const $ = cheerio.load(html);
     const fullMeme = $("body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12> div.media-element-wrapper");
     return fullMeme;
-};
+}; // Gets only memes to string
 const getMemeInfo = (getMeme) => {
     const memes = [];
     const $ = cheerio.load(getMeme);
@@ -51,7 +51,7 @@ const getMemeInfo = (getMeme) => {
         autor: autor
     });
     return memes;
-};
+}; // Takes info about memes
 export function fullScrap() {
     return __awaiter(this, void 0, void 0, function* () {
         getUrl("kwejk.pl")
@@ -62,7 +62,7 @@ export function fullScrap() {
             return memes;
         }).then((memes) => console.log(memes));
     });
-}
+} // Function that logs all memes
 export function randomMeme() {
     return __awaiter(this, void 0, void 0, function* () {
         getUrl("kwejk.pl")
@@ -70,9 +70,10 @@ export function randomMeme() {
             .then((getMeme) => {
             let memes = [];
             getMeme.each((_, getMeme) => (memes = memes.concat(getMemeInfo(getMeme))));
-            const i = Math.floor(Math.random() * memes.length - 1);
+            const i = Math.floor(Math.random() * memes.length);
             console.log(memes[i]);
+            console.log(i);
         });
     });
-}
+} // Function that logs random 1 meme
 //# sourceMappingURL=meme_scrapper.js.map

@@ -24,7 +24,7 @@ import {meme} from './meme_type'
         console.error(error);
         reject(error);
       });
-  });
+  });   // Gets full website to string.
 
   const getMeme = (html: string): cheerio.Cheerio => {
     const $ = cheerio.load(html);
@@ -32,7 +32,7 @@ import {meme} from './meme_type'
       "body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12> div.media-element-wrapper"
     );
     return fullMeme;
-  };
+  }; // Gets only memes to string
     
   const getMemeInfo=(getMeme: cheerio.Element):meme[]=>{
     const memes : meme[]=[];
@@ -50,7 +50,7 @@ import {meme} from './meme_type'
       autor:autor
     })
      return memes;
-  }
+  } // Takes info about memes
   
   export async function fullScrap(){ 
     getUrl("kwejk.pl")
@@ -60,7 +60,7 @@ import {meme} from './meme_type'
     getMeme.each((_, getMeme) => (memes = memes.concat(getMemeInfo(getMeme))));
     return memes;
     }).then((memes)=>console.log(memes))
-  }
+  } // Function that logs all memes
   
 
   export async function randomMeme(){ 
@@ -70,10 +70,11 @@ import {meme} from './meme_type'
   .then((getMeme) => {
     let memes: meme[] = [];
     getMeme.each((_, getMeme) => (memes = memes.concat(getMemeInfo(getMeme))));
-    const i = Math.floor(Math.random() * memes.length-1);
+    const i = Math.floor(Math.random() * memes.length);
     console.log(memes[i]);
+    console.log(i);
   })
-  }
+  } // Function that logs random 1 meme
   
   
   
