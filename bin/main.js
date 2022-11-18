@@ -1,5 +1,5 @@
 import { question } from "readline-sync";
-import { fullScrap, randomMeme } from './meme_scrapper.js';
+import { fullScrap, randomMeme } from './src/meme_scrapper.js';
 function main() {
     ;
     const question1 = question('Welcome to scrapper. What do You want to do ? \n1.Full scrap meme site\n2.Random 1 meme\n3.Quit\n: ');
