@@ -14,10 +14,6 @@ To run program use:
 ```bash
   npm run main
 ```
-To run only scrapper use:
-```
-  npm run start
-```
 ## Meme Class type
 ###  Code Representation
 ```code
