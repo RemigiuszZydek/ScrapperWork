@@ -10,7 +10,7 @@ Program to scrap data from "kwejk.pl" website and show it at console.
 ```bash
   npm i
 ```
-To run program use:
+3. To run program use:
 ```bash
   npm run main
 ```
