@@ -15,6 +15,7 @@ if(!validInputs){
         main()
        },500);
 }
+
 switch (question1){
         case '1':
             fullScrap();

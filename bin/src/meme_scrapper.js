@@ -41,11 +41,13 @@ const getMemeInfo = (getMeme) => {
     const url = $('div > div').attr('data-image');
     const title = $('div >div > div > div.content > h2 > a ').text().trim().replace("\n", "");
     const likes = $('div>div').attr('data-vote-up');
+    const dislikes = $('div>div').attr('data-vote-down');
     const autor = $('div > div > div.user-bar > div > a > span.name').text();
     memes.push({
         url: url,
         title: title,
         likes: likes,
+        dislikes: dislikes,
         autor: autor
     });
     return memes;

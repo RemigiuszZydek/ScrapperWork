@@ -2,7 +2,6 @@ import https from 'https';
 import cheerio from "cheerio";
 import {meme} from './meme_type'
 
-
  const getUrl = async (hostname: string,): Promise<string> =>
   new Promise((resolve, reject) => {
     https
@@ -34,10 +33,6 @@ import {meme} from './meme_type'
     );
     return fullMeme;
   };
-  
-  
-
-  
     
   const getMemeInfo=(getMeme: cheerio.Element):meme[]=>{
     const memes : meme[]=[];
@@ -45,17 +40,16 @@ import {meme} from './meme_type'
     const url = $('div > div').attr('data-image');
     const title = $('div >div > div > div.content > h2 > a ').text().trim().replace("\n","");
     const likes = $('div>div').attr('data-vote-up');
+    const dislikes = $('div>div').attr('data-vote-down');
     const autor = $('div > div > div.user-bar > div > a > span.name').text()
     memes.push({
       url:url,
       title: title,
       likes: likes,
+      dislikes:dislikes,
       autor:autor
     })
-    
-    
-    return memes;
-    
+     return memes;
   }
   
   export async function fullScrap(){ 
