@@ -16,7 +16,7 @@ Program to scrap data from "kwejk.pl" website and show it at console.
 ```
 ## Meme Class type
 ###  Code Representation
-```code
+```typescript
 class meme  {
     url:string|undefined;
     title:string;
