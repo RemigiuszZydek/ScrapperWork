@@ -2,6 +2,10 @@ import https from 'https';
 import cheerio from "cheerio";
 import {meme} from './meme_type'
 
+let MemeGenerator = async()=>{
+
+
+
  const getUrl = async (hostname: string,): Promise<string> =>
   new Promise((resolve, reject) => {
     https
@@ -52,7 +56,7 @@ import {meme} from './meme_type'
      return memes;
   } // Takes info about memes
   
-  export async function fullScrap(){ 
+   async function fullScrap(){ 
     getUrl("kwejk.pl")
   .then(getMeme)
   .then((getMeme) => {
@@ -63,7 +67,7 @@ import {meme} from './meme_type'
   } // Function that logs all memes
   
 
-  export async function randomMeme(){ 
+  async function randomMeme(){ 
   
     getUrl("kwejk.pl")
   .then(getMeme)
@@ -74,7 +78,9 @@ import {meme} from './meme_type'
     console.log(memes[i]);
     console.log(i);
   })
-  } // Function that logs random 1 meme
+ }
+}
+  // Function that logs random 1 meme
   
   
   
