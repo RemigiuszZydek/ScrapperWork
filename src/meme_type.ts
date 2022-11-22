@@ -1,4 +1,4 @@
-export class meme  {
+/*export class meme  {
     url:string|undefined;
     title:string;
     likes:string|undefined;
@@ -12,4 +12,11 @@ export class meme  {
       this.dislikes=dislikes;
       this.autor=autor;
     }
-  };
+  };*/
+  export interface meme {
+    url:string|undefined;
+    title:string;
+    likes:string|undefined;
+    dislikes: string|undefined;
+    autor:string;
+  }

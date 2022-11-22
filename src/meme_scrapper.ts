@@ -1,10 +1,12 @@
 import cheerio from "cheerio";
 import { meme } from "./meme_type";
-import Puppeteer from "puppeteer";
+import Puppeteer,{Browser} from "puppeteer";
 
 export class MemeGenerator {
 	private getWebsite: Promise<string>;
-	constructor(url: string) {
+	browser: Puppeteer.Browser;
+	constructor(url: string,browser:Browser) {
+		this.browser=browser;
 		if (url !== "") {
 			this.getWebsite = this.getHtml(url);
 		} else throw new Error("[ERROR] - Empty or wrong Url!");
@@ -12,18 +14,17 @@ export class MemeGenerator {
 	
 	private async getHtml (url:string):Promise<string>{
 		let html:string[]=[];
-		const browser = await Puppeteer.launch({headless: true});
-		const page = await browser.newPage();
-		
-		
-		for(let i =0; i<=2 ; i++){
-			await page.goto(url,{waitUntil:'networkidle2'});
+		const page = await this.browser.newPage();
+		await page.goto(url,{waitUntil:'networkidle2'})
+		console.log(`Scrapped page nr ${1} of 3`);
+		for(let i =1; i<=2 ; i++){
 			let htmlstring= await page.content();
 			html.push(htmlstring)
 			await page.click('body > main > div.container-fluid > div.row.feed-top-padding > div.col-sm-8.col-xs-12 > div.pagination > a.btn.btn-next.btn-gold > span');
+			await page.waitForTimeout(2000);
 			console.log(`Scrapped page nr ${i+1} of 3`);
 		}
-		
+		page.close();
 		return html.toString();
 
 	}
