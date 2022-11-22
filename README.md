@@ -1,6 +1,6 @@
 # Scrapper for Work
 
-Program to scrap data from "kwejk.pl" website and show it at console. Scrapper gets memes from random 3 pages of Kwejk and scrap them. Random meme scrap includes only 1 meme from this 3 random pages.
+Program to scrap data from "kwejk.pl" website and show it at console. Scrapper gets memes from 3 pages of Kwejk and scrap them. First Page is random and 2 previous pages. Random meme scrap includes only 1 meme from this 3 random pages.
 
 
 ## Installation
