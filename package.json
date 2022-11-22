@@ -22,6 +22,7 @@
   "homepage": "https://github.com/RemigiuszZydek/ScrapperWork#readme",
   "dependencies": {
     "@types/cheerio": "^0.22.31",
+    "@types/puppeteer": "^7.0.4",
     "@types/readline-sync": "^1.4.4",
     "cheerio": "^1.0.0-rc.12",
     "prettier": "^2.7.1",
