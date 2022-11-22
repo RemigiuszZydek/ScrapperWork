@@ -1,0 +1,37 @@
+{
+  "name": "scrapperwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "meme_scrapper.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && node bin/meme_scrapper.js",
+    "main": "npx tsc && node bin/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemigiuszZydek/ScrapperWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RemigiuszZydek/ScrapperWork/issues"
+  },
+  "homepage": "https://github.com/RemigiuszZydek/ScrapperWork#readme",
+  "dependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@types/puppeteer": "^7.0.4",
+    "@types/readline-sync": "^1.4.4",
+    "cheerio": "^1.0.0-rc.12",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
+    "puppeteer": "^19.2.2",
+    "readline-sync": "^1.4.10",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
+}
