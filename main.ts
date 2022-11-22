@@ -39,7 +39,7 @@ function main(): void {
 function input(str: string): boolean {
 	const inputs = str;
 	const validInput: boolean = Boolean(
-		inputs === "1" || inputs === "2" || inputs === "3"|| inputs==='4',
+		inputs === "1" || inputs === "2" || inputs === "3",
 	);
 	return validInput;
 }
