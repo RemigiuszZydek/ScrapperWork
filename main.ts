@@ -24,7 +24,7 @@ function main(browser:Browser): void {
 			meme.fullScrap();
 						setTimeout(function () {
 							main(browser);
-						}, 25000);
+						}, 20000);
 				
 			break;
 		case "2":

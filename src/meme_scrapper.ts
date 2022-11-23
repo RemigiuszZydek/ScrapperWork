@@ -66,14 +66,16 @@ export class MemeGenerator {
 		return await this.getWebsite.then((website) => {
 			let memes: meme[] = [];
 			this.getMeme(website).each((_, getMeme) => {
-				memes = memes.concat(this.getMemeInfo(getMeme));
+				memes = memes.concat(this.getMemeInfo(getMeme));		
 			});
+			console.log(`[INFO] - Number of memes scrapped: ${memes.length}`);
 			return memes;
 		});
 	}
 
 	async fullScrap() {
 		await this.pageScrap().then((memes) => console.log(memes));
+		
 		
 	}
 	async randomMeme() {
