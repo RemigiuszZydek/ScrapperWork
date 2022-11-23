@@ -17,21 +17,13 @@ Program to scrap data from "kwejk.pl" website and show it at console. Scrapper g
 ## Meme Class type
 ###  Code Representation
 ```typescript
-class meme  {
+  export interface meme {
     url:string|undefined;
     title:string;
     likes:string|undefined;
     dislikes: string|undefined;
     autor:string;
-
-    constructor(url: string,title: string,likes: string,dislikes: string,autor: string){
-      this.url=url;
-      this.title=title;
-      this.likes=likes;
-      this.dislikes=dislikes;
-      this.autor=autor;
-    }
-  };
+  }
   ```
 ### Console Representation
 ```bash
